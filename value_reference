@@ -1,0 +1,32 @@
+#include <stdio.h>
+void value(int a,int b);
+void reference();
+int main()
+{
+    int a,b,c,d;
+    a=10;
+    b=20;
+    value(a,b);
+    printf("output call by value \na=%d\nb=%d\n",a,b);
+    a=10;
+    b=20;
+    reference(&a,&b);
+    printf("out put of call by reference \na=%d\nb=%d\n", a,b);
+    return 0;
+}
+void value(int a,int b)
+{
+  int temp;
+  temp=a;
+  a=b;
+  b=temp;
+  
+}
+void reference(int *a,int *b)
+{
+    int temp;
+    temp=*a;
+    *a=*b;
+    *b=temp;
+   
+}
