@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+struct student{
+    char name[20];
+    int age;
+    int class;
+};
+typedef struct student ss;
+int main()
+{
+    ss *s;
+    s=(ss*)malloc(sizeof(ss)*10);
+    struct student student1;
+    strcpy(student1.name,"sindu");
+    student1.age=12;
+    student1.class=5;
+    printf("details of student1: \n");
+    printf("name=%s\nage=%d\nclass=%d\n",student1.name,student1.age,student1.class);
+
+     struct student student2;
+    strcpy(student2.name,"kruthi");
+    student2.age=15;
+    student2.class=7;
+    printf("details of student2: \n");
+    printf("name=%s\nage=%d\nclass=%d\n",student2.name,student2.age,student2.class);
+
+ struct student student3;
+    strcpy(student3.name,"kavi");
+    student3.age=18;
+    student3.class=8;
+    printf("details of student3: \n");
+    printf("name=%s\nage=%d\nclass=%d\n",student3.name,student3.age,student3.class);
+    
+}
